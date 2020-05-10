@@ -38,9 +38,8 @@ class App extends Component {
 	}
 }
 const PrivateRoute = ( { component: Component, currentUser, ...rest } ) => {
-	console.log( "current user===>", currentUser )
+	
 	let location = useLocation();
-	console.log( "location====>", location.pathname )
 
 	return (
 		<Route
@@ -56,7 +55,6 @@ const PrivateRoute = ( { component: Component, currentUser, ...rest } ) => {
 };
 
 const authenticate = ( currentUser ) => {
-	console.log( "current user===>", currentUser )
 	if ( currentUser !== null ) {
 		return true;
 	}
