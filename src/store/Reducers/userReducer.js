@@ -1,14 +1,14 @@
 import UserAction from "../actions/userActions";
 
-function userReducer(state = {
+function userReducer( state = {
     isLoading: false,
     success: false,
     isError: false,
     users: null,
     edit: false,
     currentUser: null,
-}, action) {
-    switch (action.type) {
+}, action ) {
+    switch ( action.type ) {
         case UserAction.GET_ALL_USERS:
             return {
                 ...state,
@@ -32,9 +32,19 @@ function userReducer(state = {
                 currentUser: action.data
             }
         case UserAction.SET_QUETIONS_ANSWER:
-            const { qid, answer } = action.data
+            const { qid, answer, authedUser } = action.data
             return {
                 ...state,
+                users: {
+                    ...state.users,
+                    [authedUser]: {
+                        ...state.users[authedUser],
+                        answers: {
+                            ...state.users[authedUser]['answers'],
+                            [qid]: answer
+                        }
+                    }
+                },
                 currentUser: {
                     ...state.currentUser,
                     answers: {
@@ -43,11 +53,24 @@ function userReducer(state = {
                     }
 
                 }
+
+            }
+        case UserAction.SET_QUETION:
+            const { author, id } = action.data
+            return {
+                ...state,
+                users: {
+                    ...state.users,
+                    [author]: {
+                        ...state.users[author],
+                        questions: [...state.users[author].questions, id]
+                    }
+                }
             }
         case UserAction.LOGOUT:
-            return{
+            return {
                 ...state,
-                currentUser:null,
+                currentUser: null,
             }
         default:
             return state

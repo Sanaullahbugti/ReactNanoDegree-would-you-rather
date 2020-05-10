@@ -6,12 +6,9 @@ import QuestionBoard from './QuestionsBoard';
 const { Content } = Layout;
 
 class Home extends Component {
-    UNSAFE_componentWillMount = () => {
-        console.log( "user", this.props.currentUser );
-    }
+  
     render() {
         const { currentUser } = this.props;
-        console.log( "user in ender", this.props.currentUser );
         return (
             <Layout>
                 <Content style={{ width: "100vw", minHeight: "80vh", marginTop: "20vh" }}>

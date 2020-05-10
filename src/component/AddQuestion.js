@@ -21,7 +21,6 @@ class AddQuestion extends Component {
         //const author = this.props.currentUser.id
         this.props.form.validateFields((err, values) => {
             if (!err) {
-                console.log('Received values of form: ', values);
                 this.props.saveQuestion({
                     author: this.props.currentUser.id,
                     optionOneText: values.optionOne,

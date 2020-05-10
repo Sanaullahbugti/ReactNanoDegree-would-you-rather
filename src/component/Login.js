@@ -12,7 +12,6 @@ class Login extends Component {
     componentDidMount() {
         this.props.loadUsers();
         this.props.loadQuestions();
-        //  console.log( "location 1===>", this.props.location.state.referrer )
     }
     submit = ( evt ) => {
         evt.preventDefault();
@@ -25,7 +24,7 @@ class Login extends Component {
     render() {
         const { isDisabled } = this.state
         const { users, isLoading } = this.props
-        users && console.log( Object.keys( users ) );
+
         return (
             <Layout>
                 <Content style={{ display: "flex", justifyContent: "center", width: "100vw", height: "100vh" }}>

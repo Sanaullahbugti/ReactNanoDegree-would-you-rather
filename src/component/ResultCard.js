@@ -4,7 +4,6 @@ import Text from 'antd/lib/typography/Text';
 import { Link } from 'react-router-dom';
 function ResultCard(props) {
     const { currentQuestion, currentUser } = props;
-    console.log(currentUser.answers[currentQuestion.id]);
     return (
         <Col span={18} xs={24} sm={24} md={8} lg={12} xl={14} xxl={18}>
             <Row style={{ textAlign: "center" }}>

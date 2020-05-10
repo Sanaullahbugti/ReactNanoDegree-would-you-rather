@@ -4,11 +4,7 @@ import Profile from "./Profile";
 import { connect } from 'react-redux'
 const { Content } = Layout
 class LeaderBoard extends Component {
-    UNSAFE_componentWillReceiveProps = ( newProps ) => {
-        if ( newProps.userRanking !== this.props.userRanking ) {
-            console.log( "hey log====>" );
-        }
-    }
+   
     state = {
         value: null,
         isDisabled: true,
@@ -35,7 +31,6 @@ class LeaderBoard extends Component {
     render() {
 
         const { currentUser, userRanking } = this.props
-        console.log( "user=====>", userRanking )
         return (
             <Layout>
                 <Content style={{ width: "100vw", minHeight: "80vh", marginTop: "20vh" }}>
@@ -48,7 +43,6 @@ class LeaderBoard extends Component {
                                 <Card>
                                     {Object.values( userRanking ).map( ( user, index ) => {
                                         const { name, avatarURL, questionAsked, answered } = user
-                                        console.log( this.returnSrc( index ) );
                                         return ( <Card
                                             key={index}
                                             title={
