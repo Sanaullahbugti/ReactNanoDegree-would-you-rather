@@ -23,11 +23,9 @@ class ShowPoll extends Component {
                                             <Text>OR</Text>
 
                                             <Row>
-                                                {type == "unAnsd" ? <Button type="primary" style={{ width: "100%", marginTop: "20px" }}>
-                                                    Answer Poll
-                                </Button> : <Button type="primary" style={{ width: "100%", marginTop: "20px" }}>
-                                                        View Poll Result
-                                </Button>}
+                                                <Button type="primary" style={{ width: "100%", marginTop: "20px" }}>
+                                                    {type == "unAnsd" ? "Answer Poll" : "View Poll Result"}
+                                                </Button>
                                             </Row>
                                         </Col>
                                     </Row>

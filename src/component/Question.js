@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Card, Avatar, Divider, Col, Row, Layout } from "antd";
-import NavBar from "./NavBar";
 import Profile from "./Profile";
 import { connect } from 'react-redux'
 import QuestionsMiddle from "../store/Middleware/QuestionsMiddleware";
