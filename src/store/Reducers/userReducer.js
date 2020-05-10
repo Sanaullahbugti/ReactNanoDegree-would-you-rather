@@ -35,7 +35,6 @@ function userReducer(state = {
             const { qid, answer } = action.data
             return {
                 ...state,
-
                 currentUser: {
                     ...state.currentUser,
                     answers: {

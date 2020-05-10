@@ -12,7 +12,7 @@ class Login extends Component {
     componentDidMount() {
         this.props.loadUsers();
         this.props.loadQuestions();
-      //  console.log( "location 1===>", this.props.location.state.referrer )
+        //  console.log( "location 1===>", this.props.location.state.referrer )
     }
     submit = ( evt ) => {
         evt.preventDefault();
@@ -56,8 +56,8 @@ class Login extends Component {
                                 }
                             >
                                 {users &&
-                                    Object.keys( users ).map( user => (
-                                        <Select.Option value={JSON.stringify( users[user] )}>
+                                    Object.keys( users ).map( ( user, index ) => (
+                                        <Select.Option value={JSON.stringify( users[user] )} key={index}>
                                             <Avatar src={users[user].avatarURL} />{users[user].name}</Select.Option>
                                     ) )}
                             </Select>
