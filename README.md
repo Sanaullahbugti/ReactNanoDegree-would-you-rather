@@ -1,8 +1,8 @@
 This app is built using react and redux. Ant Design components are also used in this app.
 
 This is a web app that lets a user play the “Would You Rather?” game. The game goes like this: A user is asked a question in the form: “Would you rather [option A] or [option B] ?”. The user selects any of the options. Answering "neither" or "both" is against the rules.
-In this app, users will be able to answer questions, see which questions they haven’t answered, see how other people have voted, post questions, and see the ranking of users on the leaderboard
-you can find application on this link
+In this app, users will be able to answer questions, see which questions they haven’t answered, see how other people have voted, post questions, and see the ranking of users on the leaderboard.
+You can find application on this link
 https://reactnd-wouldyourather.netlify.app/
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
